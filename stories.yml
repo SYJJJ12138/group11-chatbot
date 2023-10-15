@@ -1,0 +1,148 @@
+version: "3.1"
+
+stories:
+
+# 购买机票的故事
+# - story: Book a Flight
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: book_flight
+#   - action: action_book_flight
+
+# - story: Inquire Flight Information
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: inquire_flight_info
+#   - action: action_inquire_flight_info
+
+
+# # 取消预定机票
+# - story: Cancel Booking
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: cancel_booking
+#   # - action: utter_ask_username
+#   # - intent: input_username
+#   # - slot_was_set:
+#   #   - user_name: user_name
+#   - action: action_cancel_booking
+
+# - story: Provide Departure City
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: provide_departure_city
+#   - action: action_provide_departure_city
+
+# - story: Provide Destination City
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: provide_destination_city
+#   - action: action_provide_destination_city
+
+# - story: Provide Departure Date
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: provide_departure_date
+#   - action: action_provide_departure_date
+
+# - story: init
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: action_init_username
+
+- story: input name
+  steps:
+  - intent: input_username
+  - action: action_init_username
+
+
+- story: book ticket
+  steps:
+  - intent: book_ticket
+  - action: utter_ask_film
+
+# 查询所买机票
+- story: query my ticket
+  steps:
+  - intent: query_ticket
+  - action: action_query_ticket
+
+# 取消机票
+- story: cancel ticket
+  steps:
+  - intent: cancel_ticket
+  - action: action_cancel_ticket
+
+# - story: Deny
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: deny
+#   - action: action_deny
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: provide_destination_city
+#   - intent: provide_destination_city
+#   - intent: provide_destination_city
+#     entities:
+#     - destination_city: China
+#   - action: action_provide_destination_city
+#   - action: action_provide_destination_city
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - slot_was_set:
+#     - option: hi
+#   - action: utter_greet
+#   - intent: book_flight
+#   - slot_was_set:
+#     - option: i want to book some flight
+#   - action: utter_what_is_your_name
+#   - intent: provide_user_name
+#   - slot_was_set:
+#     - option: my name is hoyi
+#   - intent: provide_user_name
+#     entities:
+#     - user_name: hoyi
+#   - action: action_default_fallback
+#   - intent: greet
+#   - slot_was_set:
+#     - option: hi
+#   - action: utter_greet
+#   - intent: book_flight
+#   - slot_was_set:
+#     - option: i want to book some flight
+#   - action: utter_what_is_your_name
+#   - intent: provide_user_name
+#   - slot_was_set:
+#     - option: my name is hoyi
+#   - intent: provide_user_name
+#     entities:
+#     - user_name: hoyi
+#   - action: action_default_fallback
+
+# - story: interactive_story_1
+#   steps:
+#   - slot_was_set:
+#     - option: hi
+#   - slot_was_set:
+#     - option: i want to check my ticket
+#   - intent: input_username
+#     entities:
+#     - user_name: hoyi
+#   - slot_was_set:
+#     - option: my name is hoyi
+#   - slot_was_set:
+#     - user_name: hoyi
+#   - action: action_query_ticket

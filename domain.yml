@@ -1,0 +1,80 @@
+version: '3.1'
+intents:
+- book_ticket
+- bot_challenge
+- goodbye
+- greet
+- input_username
+- query_ticket
+- select_1_1
+- select_1_2
+- select_1_3
+- movie_1
+- movie_2
+- movie_3
+- cancel_ticket
+actions:
+- action_query_ticket
+- utter_greet
+# - utter_what_is_your_name
+- utter_ask_seat
+- utter_ask_todo
+- action_select_seat
+- action_init_username
+- action_cancel_ticket
+- action_select_film
+entities:
+- user_name
+- seat
+- film_name
+responses:
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_greet:
+  - text: Hello! How can I assist you today?
+  utter_goodbye:
+  - text: Bye :)
+  # utter_what_is_your_name:
+  # - text: What is your name?
+  # utter_what_is_your_name_2:
+  # - text: What is your name?
+  utter_ask_seat:
+  - text: What is your seat number?
+    buttons:
+    - title: Row 1, Seat 1
+      payload: /select_1_1
+    - title: Row 1, Seat 2
+      payload: /select_1_2
+    - title: Row 1, Seat 3
+      payload: /select_1_3
+  utter_ask_film:
+  # 询问你想看什么电影
+  - text: What movie do you want to watch?
+    buttons:
+    - title: The Shawshank Redemption
+      payload: /movie_1
+    - title: The Dark Knight
+      payload: /movie_2
+    - title: Godfather
+      payload: /movie_3
+  utter_ask_todo:
+  - text: what can I do for you?
+slots:
+  seat:
+    type: text
+    mappings:
+    - type: from_text
+      entity: seat
+  user_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_name
+  film_name:
+    type: text
+    mappings:
+    - type: from_text
+      entity: film_name
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

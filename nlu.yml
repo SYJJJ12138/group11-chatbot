@@ -1,0 +1,127 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: select_1_1
+  examples: |
+    - Row 1, Seat 1
+    - row 1, seat 1
+- intent: select_1_2
+  examples: |
+    - Row 1, Seat 2
+    - row 1, seat 2
+- intent: select_1_3
+  examples: |
+    - Row 1, Seat 3
+    - row 1, seat 3
+- intent: movie_1
+  examples: |
+    - The Shawshank Redemption
+    - Shawshank Redemption
+- intent: movie_2
+  examples: |
+    - The Dark Knight
+    - Dark Knight
+- intent: movie_3
+  examples: |
+    - The Godfather
+    - Godfather
+- intent: book_ticket
+  examples: |
+    - I'd like to purchase a movie ticket
+    - Can I buy a ticket for the movie?
+    - How do I get a cinema ticket?
+    - Purchase movie tickets
+    - Get me a seat for the film
+    - I want to see a movie, how can I buy a ticket?
+    - What's the process for buying movie tickets?
+- intent: input_username
+  examples: |
+    - my name is [Spideybw](user_name)
+    - my name is [ybww](user_name)
+    - my name is [Ssfakjheybw](user_name)
+    - my name is [yyy](user_name)
+    - my name is [Tian](user_name)
+    - my name is [Spidey](user_name)
+    - my name is [Ray](user_name)
+    - my name is [hoyi](user_name)
+    - my name is [mary](user_name)
+    - my name is [tom](user_name)
+    - my name is [peter](user_name)
+    - my name is [jerry](user_name)
+    - my name is [yang](user_name)
+    - my name is [pity](user_name)
+    - Im [Spideybw](user_name)
+    - I am [Spideybw](user_name)
+    - I am [yyy](user_name)
+    - I am [Ray](user_name)
+    - I am [Spidey](user_name)
+    - I'm [Spideybw](user_name)
+    - I'm [Ray](user_name)
+    - I'm [Spidey](user_name)
+    - I'm [yyy](user_name)
+    - [Spideybw](user_name)
+    - [Ray](user_name)
+    - [Spidey](user_name)
+    - [yyy](user_name)
+    - [ybww](user_name)
+    - my name is [hoyi](user_name)
+- intent: query_ticket
+  examples: |
+    - Show my movie tickets
+    - Can I see my purchased tickets?
+    - How do I check my movie bookings?
+    - View my cinema tickets
+    - I want to know about my movie reservations
+    - Retrieve my movie ticket details
+    - Are there any tickets in my name?
+    - Can you show my movie bookings?
+    - Tell me about my movie ticket
+    - Display my cinema tickets
+    - check my ticket
+    - check my movie ticket
+
+
+# 取消机票
+- intent: cancel_ticket
+  examples: |
+    - Cancel my movie ticket
+    - I'd like to cancel my cinema ticket
+    - How can I cancel my movie booking?
+    - Cancel my reserved movie seat
+    - I want to return my movie ticket
+    - Can I get a refund for my cinema ticket?
+    - Please cancel my film ticket
+    - What's the process for canceling movie tickets?
+    

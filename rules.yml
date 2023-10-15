@@ -1,0 +1,54 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say Hello or ask name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_todo
+
+- rule: select 1
+  steps:
+  - intent: select_1_1
+  - action: action_select_seat
+
+- rule: select 2
+  steps:
+  - intent: select_1_2
+  - action: action_select_seat
+
+- rule: select 3
+  steps:
+  - intent: select_1_3
+  - action: action_select_seat
+
+- rule: movie_1
+  steps:
+  - intent: movie_1
+  - action: action_select_film
+
+- rule: movie_2
+  steps:
+  - intent: movie_2
+  - action: action_select_film
+
+- rule: movie_3
+  steps:
+  - intent: movie_3
+  - action: action_select_film
+
+# - rule: action 1
+#   steps:
+#   - intent: input_username
+#   - action: utter_ask_destination_city
